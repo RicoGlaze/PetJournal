@@ -35,8 +35,8 @@
             this.passwordRegTxt = new System.Windows.Forms.TextBox();
             this.passwordConfirmRegTxt = new System.Windows.Forms.TextBox();
             this.userRegButtonPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.userRegBackBtn = new System.Windows.Forms.Button();
             this.userRegSubmitBtn = new System.Windows.Forms.Button();
+            this.userRegBackBtn = new System.Windows.Forms.Button();
             this.userRegButtonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,17 +110,6 @@
             this.userRegButtonPanel.Size = new System.Drawing.Size(456, 39);
             this.userRegButtonPanel.TabIndex = 6;
             // 
-            // userRegBackBtn
-            // 
-            this.userRegBackBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.userRegBackBtn.Location = new System.Drawing.Point(3, 3);
-            this.userRegBackBtn.Name = "userRegBackBtn";
-            this.userRegBackBtn.Size = new System.Drawing.Size(222, 25);
-            this.userRegBackBtn.TabIndex = 0;
-            this.userRegBackBtn.Text = "Back";
-            this.userRegBackBtn.UseVisualStyleBackColor = true;
-            // 
             // userRegSubmitBtn
             // 
             this.userRegSubmitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -131,6 +120,17 @@
             this.userRegSubmitBtn.TabIndex = 1;
             this.userRegSubmitBtn.Text = "Submit";
             this.userRegSubmitBtn.UseVisualStyleBackColor = true;
+            // 
+            // userRegBackBtn
+            // 
+            this.userRegBackBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userRegBackBtn.Location = new System.Drawing.Point(3, 3);
+            this.userRegBackBtn.Name = "userRegBackBtn";
+            this.userRegBackBtn.Size = new System.Drawing.Size(222, 25);
+            this.userRegBackBtn.TabIndex = 0;
+            this.userRegBackBtn.Text = "Back";
+            this.userRegBackBtn.UseVisualStyleBackColor = true;
             // 
             // userRegistration
             // 
@@ -147,7 +147,7 @@
             this.MaximumSize = new System.Drawing.Size(554, 281);
             this.MinimumSize = new System.Drawing.Size(357, 281);
             this.Name = "userRegistration";
-            this.Text = "userRegistration";
+            this.Text = "Registration";
             this.userRegButtonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

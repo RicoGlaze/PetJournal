@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PetJournal
 {
-    public partial class Form1 : Form
+    public partial class userLogin : Form
     {
-        public Form1()
+        public userLogin()
         {
             InitializeComponent();
         }
