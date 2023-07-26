@@ -33,8 +33,9 @@
             this.userLoginPanelBtn = new System.Windows.Forms.TableLayoutPanel();
             this.userLoginExitBtn = new System.Windows.Forms.Button();
             this.userLoginBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.usernameLoginTxt = new System.Windows.Forms.TextBox();
+            this.passwordLoginTxt = new System.Windows.Forms.TextBox();
+            this.userLoginRegisterLnk = new System.Windows.Forms.LinkLabel();
             this.userLoginPanelBtn.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,32 +94,45 @@
             this.userLoginBtn.TabIndex = 1;
             this.userLoginBtn.Text = "Login";
             this.userLoginBtn.UseVisualStyleBackColor = true;
+            this.userLoginBtn.Click += new System.EventHandler(this.userLoginBtn_Click);
             // 
-            // textBox1
+            // usernameLoginTxt
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.usernameLoginTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(111, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(350, 20);
-            this.textBox1.TabIndex = 3;
+            this.usernameLoginTxt.Location = new System.Drawing.Point(111, 22);
+            this.usernameLoginTxt.Name = "usernameLoginTxt";
+            this.usernameLoginTxt.Size = new System.Drawing.Size(350, 20);
+            this.usernameLoginTxt.TabIndex = 3;
             // 
-            // textBox2
+            // passwordLoginTxt
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.passwordLoginTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(111, 53);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(350, 20);
-            this.textBox2.TabIndex = 4;
+            this.passwordLoginTxt.Location = new System.Drawing.Point(111, 53);
+            this.passwordLoginTxt.Name = "passwordLoginTxt";
+            this.passwordLoginTxt.Size = new System.Drawing.Size(350, 20);
+            this.passwordLoginTxt.TabIndex = 4;
+            // 
+            // userLoginRegisterLnk
+            // 
+            this.userLoginRegisterLnk.AutoSize = true;
+            this.userLoginRegisterLnk.Location = new System.Drawing.Point(323, 136);
+            this.userLoginRegisterLnk.Name = "userLoginRegisterLnk";
+            this.userLoginRegisterLnk.Size = new System.Drawing.Size(89, 13);
+            this.userLoginRegisterLnk.TabIndex = 5;
+            this.userLoginRegisterLnk.TabStop = true;
+            this.userLoginRegisterLnk.Text = "Register Account";
+            this.userLoginRegisterLnk.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.userLoginRegisterLnk_LinkClicked);
             // 
             // userLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 242);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.userLoginRegisterLnk);
+            this.Controls.Add(this.passwordLoginTxt);
+            this.Controls.Add(this.usernameLoginTxt);
             this.Controls.Add(this.userLoginPanelBtn);
             this.Controls.Add(this.passwordLoginLbl);
             this.Controls.Add(this.usernameLoginLbl);
@@ -126,6 +140,7 @@
             this.MinimumSize = new System.Drawing.Size(357, 281);
             this.Name = "userLogin";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.userLogin_Load);
             this.userLoginPanelBtn.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,8 +154,9 @@
         private System.Windows.Forms.TableLayoutPanel userLoginPanelBtn;
         private System.Windows.Forms.Button userLoginExitBtn;
         private System.Windows.Forms.Button userLoginBtn;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox usernameLoginTxt;
+        private System.Windows.Forms.TextBox passwordLoginTxt;
+        private System.Windows.Forms.LinkLabel userLoginRegisterLnk;
     }
 }
 

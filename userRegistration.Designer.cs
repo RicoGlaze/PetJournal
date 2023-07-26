@@ -120,6 +120,7 @@
             this.userRegSubmitBtn.TabIndex = 1;
             this.userRegSubmitBtn.Text = "Submit";
             this.userRegSubmitBtn.UseVisualStyleBackColor = true;
+            this.userRegSubmitBtn.Click += new System.EventHandler(this.userRegSubmitBtn_Click);
             // 
             // userRegBackBtn
             // 
@@ -131,6 +132,7 @@
             this.userRegBackBtn.TabIndex = 0;
             this.userRegBackBtn.Text = "Back";
             this.userRegBackBtn.UseVisualStyleBackColor = true;
+            this.userRegBackBtn.Click += new System.EventHandler(this.userRegBackBtn_Click);
             // 
             // userRegistration
             // 
@@ -148,6 +150,7 @@
             this.MinimumSize = new System.Drawing.Size(357, 281);
             this.Name = "userRegistration";
             this.Text = "Registration";
+            this.Load += new System.EventHandler(this.userRegistration_Load);
             this.userRegButtonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
