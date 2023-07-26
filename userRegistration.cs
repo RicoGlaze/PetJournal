@@ -24,7 +24,7 @@ namespace PetJournal
 
         private void userRegistration_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sergi\source\repos\PetJournal\petOwner.mdf;Integrated Security=True");
+            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sergi\source\repos\PetJournal\PetJournalDataBase.mdf;Integrated Security=True");
             cn.Open();
         }
 
@@ -41,7 +41,7 @@ namespace PetJournal
             {
                 if (passwordRegTxt.Text == passwordConfirmRegTxt.Text)
                 {
-                    cmd = new SqlCommand("select * from LoginTable where username='" + usernameRegTxt.Text + "'", cn);
+                    cmd = new SqlCommand("select * from petJournalUsers where username='" + usernameRegTxt.Text + "'", cn);
                     dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {
@@ -51,7 +51,7 @@ namespace PetJournal
                     else
                     {
                         dr.Close();
-                        cmd = new SqlCommand("insert into LoginTable values(@username,@password)", cn);
+                        cmd = new SqlCommand("insert into petJournalUsers values(@username,@password)", cn);
                         cmd.Parameters.AddWithValue("username", usernameRegTxt.Text);
                         cmd.Parameters.AddWithValue("password", passwordRegTxt.Text);
                         cmd.ExecuteNonQuery();

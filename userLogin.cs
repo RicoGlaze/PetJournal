@@ -24,7 +24,7 @@ namespace PetJournal
 
         private void userLogin_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sergi\source\repos\PetJournal\petOwner.mdf;Integrated Security=True");
+            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sergi\source\repos\PetJournal\PetJournalDataBase.mdf;Integrated Security=True");
             cn.Open();
         }
 
@@ -40,7 +40,7 @@ namespace PetJournal
             if (passwordLoginTxt.Text != string.Empty || usernameLoginTxt.Text != string.Empty)
             {
 
-                cmd = new SqlCommand("select * from LoginTable where username='" + usernameLoginTxt.Text + "' and password='" + passwordLoginTxt.Text + "'", cn);
+                cmd = new SqlCommand("select * from petJournalUsers where username='" + usernameLoginTxt.Text + "' and password='" + passwordLoginTxt.Text + "'", cn);
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
