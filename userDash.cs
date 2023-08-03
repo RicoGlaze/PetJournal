@@ -16,5 +16,12 @@ namespace PetJournal
         {
             InitializeComponent();
         }
+
+        private void userDashPetRegisterBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            petRegistration registration = new petRegistration();
+            registration.ShowDialog();
+        }
     }
 }

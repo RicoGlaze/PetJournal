@@ -61,5 +61,10 @@ namespace PetJournal
                 MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void userLoginExitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

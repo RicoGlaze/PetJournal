@@ -83,6 +83,7 @@
             this.userLoginExitBtn.TabIndex = 0;
             this.userLoginExitBtn.Text = "Exit";
             this.userLoginExitBtn.UseVisualStyleBackColor = true;
+            this.userLoginExitBtn.Click += new System.EventHandler(this.userLoginExitBtn_Click);
             // 
             // userLoginBtn
             // 

@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="petRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="petRegistration.Designer.cs">
+      <DependentUpon>petRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="userDash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     <Compile Include="userRegistration.Designer.cs">
       <DependentUpon>userRegistration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="petRegistration.resx">
+      <DependentUpon>petRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userDash.resx">
+      <DependentUpon>userDash.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userLogin.resx">
       <DependentUpon>userLogin.cs</DependentUpon>
     </EmbeddedResource>
