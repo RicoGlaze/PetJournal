@@ -28,101 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.petRegistrationBlobBox = new System.Windows.Forms.PictureBox();
+            this.petRegistrationUploadBtn = new System.Windows.Forms.Button();
+            this.petRegistrationNameLbl = new System.Windows.Forms.Label();
+            this.petRegistrationAgeLbl = new System.Windows.Forms.Label();
+            this.petRegistrationBreedLbl = new System.Windows.Forms.Label();
+            this.petRegistrationNameTxt = new System.Windows.Forms.TextBox();
+            this.petRegistrationAgeTxt = new System.Windows.Forms.TextBox();
+            this.petRegistrationBreedTxt = new System.Windows.Forms.TextBox();
+            this.petRegistrationRegisterBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.petRegistrationBlobBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // petRegistrationBlobBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(348, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(178, 152);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.petRegistrationBlobBox.Location = new System.Drawing.Point(348, 12);
+            this.petRegistrationBlobBox.Name = "petRegistrationBlobBox";
+            this.petRegistrationBlobBox.Size = new System.Drawing.Size(178, 152);
+            this.petRegistrationBlobBox.TabIndex = 0;
+            this.petRegistrationBlobBox.TabStop = false;
             // 
-            // button1
+            // petRegistrationUploadBtn
             // 
-            this.button1.Location = new System.Drawing.Point(348, 182);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 37);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.petRegistrationUploadBtn.Location = new System.Drawing.Point(348, 182);
+            this.petRegistrationUploadBtn.Name = "petRegistrationUploadBtn";
+            this.petRegistrationUploadBtn.Size = new System.Drawing.Size(177, 37);
+            this.petRegistrationUploadBtn.TabIndex = 1;
+            this.petRegistrationUploadBtn.Text = "Upload";
+            this.petRegistrationUploadBtn.UseVisualStyleBackColor = true;
+            this.petRegistrationUploadBtn.Click += new System.EventHandler(this.petRegistrationUploadBtn_Click);
             // 
-            // label1
+            // petRegistrationNameLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Name";
+            this.petRegistrationNameLbl.AutoSize = true;
+            this.petRegistrationNameLbl.Location = new System.Drawing.Point(12, 43);
+            this.petRegistrationNameLbl.Name = "petRegistrationNameLbl";
+            this.petRegistrationNameLbl.Size = new System.Drawing.Size(35, 13);
+            this.petRegistrationNameLbl.TabIndex = 2;
+            this.petRegistrationNameLbl.Text = "Name";
             // 
-            // label2
+            // petRegistrationAgeLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Age";
+            this.petRegistrationAgeLbl.AutoSize = true;
+            this.petRegistrationAgeLbl.Location = new System.Drawing.Point(12, 76);
+            this.petRegistrationAgeLbl.Name = "petRegistrationAgeLbl";
+            this.petRegistrationAgeLbl.Size = new System.Drawing.Size(26, 13);
+            this.petRegistrationAgeLbl.TabIndex = 3;
+            this.petRegistrationAgeLbl.Text = "Age";
             // 
-            // label3
+            // petRegistrationBreedLbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Breed";
+            this.petRegistrationBreedLbl.AutoSize = true;
+            this.petRegistrationBreedLbl.Location = new System.Drawing.Point(12, 109);
+            this.petRegistrationBreedLbl.Name = "petRegistrationBreedLbl";
+            this.petRegistrationBreedLbl.Size = new System.Drawing.Size(35, 13);
+            this.petRegistrationBreedLbl.TabIndex = 4;
+            this.petRegistrationBreedLbl.Text = "Breed";
             // 
-            // textBox1
+            // petRegistrationNameTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(53, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 20);
-            this.textBox1.TabIndex = 5;
+            this.petRegistrationNameTxt.Location = new System.Drawing.Point(53, 40);
+            this.petRegistrationNameTxt.Name = "petRegistrationNameTxt";
+            this.petRegistrationNameTxt.Size = new System.Drawing.Size(154, 20);
+            this.petRegistrationNameTxt.TabIndex = 5;
             // 
-            // textBox2
+            // petRegistrationAgeTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(53, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 20);
-            this.textBox2.TabIndex = 6;
+            this.petRegistrationAgeTxt.Location = new System.Drawing.Point(53, 73);
+            this.petRegistrationAgeTxt.Name = "petRegistrationAgeTxt";
+            this.petRegistrationAgeTxt.Size = new System.Drawing.Size(154, 20);
+            this.petRegistrationAgeTxt.TabIndex = 6;
             // 
-            // textBox3
+            // petRegistrationBreedTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(53, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(154, 20);
-            this.textBox3.TabIndex = 7;
+            this.petRegistrationBreedTxt.Location = new System.Drawing.Point(53, 106);
+            this.petRegistrationBreedTxt.Name = "petRegistrationBreedTxt";
+            this.petRegistrationBreedTxt.Size = new System.Drawing.Size(154, 20);
+            this.petRegistrationBreedTxt.TabIndex = 7;
+            // 
+            // petRegistrationRegisterBtn
+            // 
+            this.petRegistrationRegisterBtn.Location = new System.Drawing.Point(30, 182);
+            this.petRegistrationRegisterBtn.Name = "petRegistrationRegisterBtn";
+            this.petRegistrationRegisterBtn.Size = new System.Drawing.Size(177, 37);
+            this.petRegistrationRegisterBtn.TabIndex = 8;
+            this.petRegistrationRegisterBtn.Text = "Register";
+            this.petRegistrationRegisterBtn.UseVisualStyleBackColor = true;
+            this.petRegistrationRegisterBtn.Click += new System.EventHandler(this.petRegistrationRegisterBtn_Click);
             // 
             // petRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 242);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.petRegistrationRegisterBtn);
+            this.Controls.Add(this.petRegistrationBreedTxt);
+            this.Controls.Add(this.petRegistrationAgeTxt);
+            this.Controls.Add(this.petRegistrationNameTxt);
+            this.Controls.Add(this.petRegistrationBreedLbl);
+            this.Controls.Add(this.petRegistrationAgeLbl);
+            this.Controls.Add(this.petRegistrationNameLbl);
+            this.Controls.Add(this.petRegistrationUploadBtn);
+            this.Controls.Add(this.petRegistrationBlobBox);
             this.MaximumSize = new System.Drawing.Size(554, 281);
             this.MinimumSize = new System.Drawing.Size(357, 281);
             this.Name = "petRegistration";
             this.Text = "Pet Registration";
             this.Load += new System.EventHandler(this.petRegistration_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petRegistrationBlobBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,13 +143,14 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.PictureBox petRegistrationBlobBox;
+        private System.Windows.Forms.Button petRegistrationUploadBtn;
+        private System.Windows.Forms.Label petRegistrationNameLbl;
+        private System.Windows.Forms.Label petRegistrationAgeLbl;
+        private System.Windows.Forms.Label petRegistrationBreedLbl;
+        private System.Windows.Forms.TextBox petRegistrationNameTxt;
+        private System.Windows.Forms.TextBox petRegistrationAgeTxt;
+        private System.Windows.Forms.TextBox petRegistrationBreedTxt;
+        private System.Windows.Forms.Button petRegistrationRegisterBtn;
     }
 }
