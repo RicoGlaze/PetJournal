@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace PetJournal
 {
@@ -46,7 +48,7 @@ namespace PetJournal
                 cmd.Parameters.AddWithValue("pet_name", petRegistrationNameTxt.Text);
                 cmd.Parameters.AddWithValue("pet_age", petRegistrationAgeTxt.Text);
                 cmd.Parameters.AddWithValue("pet_breed", petRegistrationBreedTxt.Text);
-                cmd.Parameters.AddWithValue("pet_photo", petRegistrationBlobBox.Image.ToString());
+                cmd.Parameters.AddWithValue("pet_photo", getPhoto());
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Your Pet was added.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -54,6 +56,14 @@ namespace PetJournal
             {
                 MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private object getPhoto()
+        {
+            MemoryStream stream = new MemoryStream();
+            petRegistrationBlobBox.Image.Save(stream, petRegistrationBlobBox.Image.RawFormat);
+
+            return stream.GetBuffer();
         }
     }
 }
