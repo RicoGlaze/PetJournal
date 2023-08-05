@@ -30,6 +30,8 @@
         {
             this.userDashPetPanelBtn = new System.Windows.Forms.TableLayoutPanel();
             this.userDashPetRegisterBtn = new System.Windows.Forms.Button();
+            this.userDashPetList = new System.Windows.Forms.ListView();
+            this.pet_name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.userDashPetPanelBtn.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,11 +41,12 @@
             this.userDashPetPanelBtn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.userDashPetPanelBtn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.userDashPetPanelBtn.Controls.Add(this.userDashPetRegisterBtn, 0, 0);
+            this.userDashPetPanelBtn.Controls.Add(this.userDashPetList, 0, 1);
             this.userDashPetPanelBtn.Location = new System.Drawing.Point(10, 12);
             this.userDashPetPanelBtn.Name = "userDashPetPanelBtn";
             this.userDashPetPanelBtn.RowCount = 2;
-            this.userDashPetPanelBtn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.userDashPetPanelBtn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.userDashPetPanelBtn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.93578F));
+            this.userDashPetPanelBtn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.06422F));
             this.userDashPetPanelBtn.Size = new System.Drawing.Size(103, 218);
             this.userDashPetPanelBtn.TabIndex = 0;
             // 
@@ -53,11 +56,31 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userDashPetRegisterBtn.Location = new System.Drawing.Point(3, 3);
             this.userDashPetRegisterBtn.Name = "userDashPetRegisterBtn";
-            this.userDashPetRegisterBtn.Size = new System.Drawing.Size(97, 48);
+            this.userDashPetRegisterBtn.Size = new System.Drawing.Size(97, 44);
             this.userDashPetRegisterBtn.TabIndex = 0;
             this.userDashPetRegisterBtn.Text = "Add Pet";
             this.userDashPetRegisterBtn.UseVisualStyleBackColor = true;
             this.userDashPetRegisterBtn.Click += new System.EventHandler(this.userDashPetRegisterBtn_Click);
+            // 
+            // userDashPetList
+            // 
+            this.userDashPetList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.pet_name});
+            this.userDashPetList.FullRowSelect = true;
+            this.userDashPetList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.userDashPetList.HideSelection = false;
+            this.userDashPetList.Location = new System.Drawing.Point(3, 53);
+            this.userDashPetList.MultiSelect = false;
+            this.userDashPetList.Name = "userDashPetList";
+            this.userDashPetList.Size = new System.Drawing.Size(97, 162);
+            this.userDashPetList.TabIndex = 1;
+            this.userDashPetList.UseCompatibleStateImageBehavior = false;
+            this.userDashPetList.View = System.Windows.Forms.View.Details;
+            // 
+            // pet_name
+            // 
+            this.pet_name.Text = "Pets Added";
+            this.pet_name.Width = 93;
             // 
             // userDash
             // 
@@ -69,6 +92,7 @@
             this.MinimumSize = new System.Drawing.Size(357, 281);
             this.Name = "userDash";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.userDash_Load);
             this.userDashPetPanelBtn.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -78,5 +102,7 @@
 
         private System.Windows.Forms.TableLayoutPanel userDashPetPanelBtn;
         private System.Windows.Forms.Button userDashPetRegisterBtn;
+        private System.Windows.Forms.ListView userDashPetList;
+        private System.Windows.Forms.ColumnHeader pet_name;
     }
 }

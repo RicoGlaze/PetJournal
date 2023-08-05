@@ -31,6 +31,7 @@ namespace PetJournal
 
         private void petRegistrationUploadBtn_Click(object sender, EventArgs e)
         {
+            petRegistrationBlobBox.SizeMode = PictureBoxSizeMode.StretchImage;
             OpenFileDialog opnfd = new OpenFileDialog();
             opnfd.Filter = "Image Files (*.jpg;*.jpeg;*.gif;)|*.jpg;*.jpeg;.*.gif";
 
@@ -61,8 +62,12 @@ namespace PetJournal
         private object getPhoto()
         {
             MemoryStream stream = new MemoryStream();
+            if (petRegistrationBlobBox.ImageLocation == null)
+            {
+                petRegistrationBlobBox.ErrorImage.Save(stream, petRegistrationBlobBox.ErrorImage.RawFormat);
+                return stream.GetBuffer();
+            }
             petRegistrationBlobBox.Image.Save(stream, petRegistrationBlobBox.Image.RawFormat);
-
             return stream.GetBuffer();
         }
     }
