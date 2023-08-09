@@ -37,6 +37,7 @@
             this.petRegistrationAgeTxt = new System.Windows.Forms.TextBox();
             this.petRegistrationBreedTxt = new System.Windows.Forms.TextBox();
             this.petRegistrationRegisterBtn = new System.Windows.Forms.Button();
+            this.petRegBackBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.petRegistrationBlobBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,19 +109,30 @@
             // 
             // petRegistrationRegisterBtn
             // 
-            this.petRegistrationRegisterBtn.Location = new System.Drawing.Point(30, 182);
+            this.petRegistrationRegisterBtn.Location = new System.Drawing.Point(130, 182);
             this.petRegistrationRegisterBtn.Name = "petRegistrationRegisterBtn";
-            this.petRegistrationRegisterBtn.Size = new System.Drawing.Size(177, 37);
+            this.petRegistrationRegisterBtn.Size = new System.Drawing.Size(77, 37);
             this.petRegistrationRegisterBtn.TabIndex = 8;
             this.petRegistrationRegisterBtn.Text = "Register";
             this.petRegistrationRegisterBtn.UseVisualStyleBackColor = true;
             this.petRegistrationRegisterBtn.Click += new System.EventHandler(this.petRegistrationRegisterBtn_Click);
+            // 
+            // petRegBackBtn
+            // 
+            this.petRegBackBtn.Location = new System.Drawing.Point(53, 182);
+            this.petRegBackBtn.Name = "petRegBackBtn";
+            this.petRegBackBtn.Size = new System.Drawing.Size(77, 37);
+            this.petRegBackBtn.TabIndex = 9;
+            this.petRegBackBtn.Text = "Back";
+            this.petRegBackBtn.UseVisualStyleBackColor = true;
+            this.petRegBackBtn.Click += new System.EventHandler(this.petRegBackBtn_Click);
             // 
             // petRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 242);
+            this.Controls.Add(this.petRegBackBtn);
             this.Controls.Add(this.petRegistrationRegisterBtn);
             this.Controls.Add(this.petRegistrationBreedTxt);
             this.Controls.Add(this.petRegistrationAgeTxt);
@@ -152,5 +164,6 @@
         private System.Windows.Forms.TextBox petRegistrationAgeTxt;
         private System.Windows.Forms.TextBox petRegistrationBreedTxt;
         private System.Windows.Forms.Button petRegistrationRegisterBtn;
+        private System.Windows.Forms.Button petRegBackBtn;
     }
 }

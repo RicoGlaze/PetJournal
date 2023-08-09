@@ -30,9 +30,11 @@
         {
             this.userDashPetPanelBtn = new System.Windows.Forms.TableLayoutPanel();
             this.userDashPetRegisterBtn = new System.Windows.Forms.Button();
-            this.userDashPetList = new System.Windows.Forms.ListView();
-            this.pet_name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.userDashPetBlob = new System.Windows.Forms.PictureBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.userDashPetPanelBtn.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userDashPetBlob)).BeginInit();
             this.SuspendLayout();
             // 
             // userDashPetPanelBtn
@@ -40,8 +42,8 @@
             this.userDashPetPanelBtn.ColumnCount = 1;
             this.userDashPetPanelBtn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.userDashPetPanelBtn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.userDashPetPanelBtn.Controls.Add(this.listBox1, 0, 1);
             this.userDashPetPanelBtn.Controls.Add(this.userDashPetRegisterBtn, 0, 0);
-            this.userDashPetPanelBtn.Controls.Add(this.userDashPetList, 0, 1);
             this.userDashPetPanelBtn.Location = new System.Drawing.Point(10, 12);
             this.userDashPetPanelBtn.Name = "userDashPetPanelBtn";
             this.userDashPetPanelBtn.RowCount = 2;
@@ -62,31 +64,40 @@
             this.userDashPetRegisterBtn.UseVisualStyleBackColor = true;
             this.userDashPetRegisterBtn.Click += new System.EventHandler(this.userDashPetRegisterBtn_Click);
             // 
-            // userDashPetList
+            // listView1
             // 
-            this.userDashPetList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.pet_name});
-            this.userDashPetList.FullRowSelect = true;
-            this.userDashPetList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.userDashPetList.HideSelection = false;
-            this.userDashPetList.Location = new System.Drawing.Point(3, 53);
-            this.userDashPetList.MultiSelect = false;
-            this.userDashPetList.Name = "userDashPetList";
-            this.userDashPetList.Size = new System.Drawing.Size(97, 162);
-            this.userDashPetList.TabIndex = 1;
-            this.userDashPetList.UseCompatibleStateImageBehavior = false;
-            this.userDashPetList.View = System.Windows.Forms.View.Details;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(119, 163);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(280, 62);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // pet_name
+            // userDashPetBlob
             // 
-            this.pet_name.Text = "Pets Added";
-            this.pet_name.Width = 93;
+            this.userDashPetBlob.Location = new System.Drawing.Point(405, 129);
+            this.userDashPetBlob.Name = "userDashPetBlob";
+            this.userDashPetBlob.Size = new System.Drawing.Size(121, 96);
+            this.userDashPetBlob.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.userDashPetBlob.TabIndex = 2;
+            this.userDashPetBlob.TabStop = false;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(3, 53);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(97, 160);
+            this.listBox1.TabIndex = 3;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // userDash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 242);
+            this.Controls.Add(this.userDashPetBlob);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.userDashPetPanelBtn);
             this.MaximumSize = new System.Drawing.Size(554, 281);
             this.MinimumSize = new System.Drawing.Size(357, 281);
@@ -94,6 +105,7 @@
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.userDash_Load);
             this.userDashPetPanelBtn.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userDashPetBlob)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -102,7 +114,8 @@
 
         private System.Windows.Forms.TableLayoutPanel userDashPetPanelBtn;
         private System.Windows.Forms.Button userDashPetRegisterBtn;
-        private System.Windows.Forms.ListView userDashPetList;
-        private System.Windows.Forms.ColumnHeader pet_name;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.PictureBox userDashPetBlob;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
