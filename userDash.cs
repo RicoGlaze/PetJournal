@@ -19,8 +19,6 @@ namespace PetJournal
     public partial class userDash : Form
     {
         private SqlConnection cn;
-        private SqlCommand cmd;
-        private SqlConnection sql;
 
         public userDash()
         {
@@ -36,7 +34,6 @@ namespace PetJournal
 
         private void userDash_Load(object sender, EventArgs e)
         {
-            //on Form load this populates the added pets section with the pet names in the database
             cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sergi\source\repos\PetJournal\PetJournalDataBase.mdf;Integrated Security=True");
 
             string query = "SELECT pet_name FROM userPets";
@@ -59,9 +56,8 @@ namespace PetJournal
             //This is suppose to retrieve the pet_photo data and convert it back into an image
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sergi\source\repos\PetJournal\PetJournalDataBase.mdf;Integrated Security=True";
             string query = "SELECT pet_photo FROM userPets WHERE pet_name = @pet_name";
-            //string query2 = "SELECT pet_name FROM userPets WHERE pet_name = @pet_name";
 
-            string desiredPetName = listBox1.Text;
+            string desiredPetName = listBox1.Text.ToString();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -89,6 +85,13 @@ namespace PetJournal
                     }
                 }
             }
+        }
+
+        private void userDashAddEntryBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            journalEntry entry = new journalEntry();
+            entry.ShowDialog();
         }
     }
 }

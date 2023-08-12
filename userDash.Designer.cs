@@ -29,12 +29,15 @@
         private void InitializeComponent()
         {
             this.userDashPetPanelBtn = new System.Windows.Forms.TableLayoutPanel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.userDashPetRegisterBtn = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.userDashPetBlob = new System.Windows.Forms.PictureBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.userDashTimelineTable = new System.Windows.Forms.TableLayoutPanel();
+            this.userDashAddEntryBtn = new System.Windows.Forms.Button();
             this.userDashPetPanelBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userDashPetBlob)).BeginInit();
+            this.userDashTimelineTable.SuspendLayout();
             this.SuspendLayout();
             // 
             // userDashPetPanelBtn
@@ -51,6 +54,15 @@
             this.userDashPetPanelBtn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.06422F));
             this.userDashPetPanelBtn.Size = new System.Drawing.Size(103, 218);
             this.userDashPetPanelBtn.TabIndex = 0;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(3, 53);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(97, 160);
+            this.listBox1.TabIndex = 3;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // userDashPetRegisterBtn
             // 
@@ -82,20 +94,37 @@
             this.userDashPetBlob.TabIndex = 2;
             this.userDashPetBlob.TabStop = false;
             // 
-            // listBox1
+            // userDashTimelineTable
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(3, 53);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(97, 160);
-            this.listBox1.TabIndex = 3;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.userDashTimelineTable.ColumnCount = 1;
+            this.userDashTimelineTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.userDashTimelineTable.Controls.Add(this.userDashAddEntryBtn, 0, 0);
+            this.userDashTimelineTable.Location = new System.Drawing.Point(120, 65);
+            this.userDashTimelineTable.Name = "userDashTimelineTable";
+            this.userDashTimelineTable.RowCount = 1;
+            this.userDashTimelineTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.userDashTimelineTable.Size = new System.Drawing.Size(51, 92);
+            this.userDashTimelineTable.TabIndex = 3;
+            // 
+            // userDashAddEntryBtn
+            // 
+            this.userDashAddEntryBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userDashAddEntryBtn.Location = new System.Drawing.Point(3, 3);
+            this.userDashAddEntryBtn.Name = "userDashAddEntryBtn";
+            this.userDashAddEntryBtn.Size = new System.Drawing.Size(45, 86);
+            this.userDashAddEntryBtn.TabIndex = 0;
+            this.userDashAddEntryBtn.Text = "Add Entry";
+            this.userDashAddEntryBtn.UseVisualStyleBackColor = true;
+            this.userDashAddEntryBtn.Click += new System.EventHandler(this.userDashAddEntryBtn_Click);
             // 
             // userDash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 242);
+            this.Controls.Add(this.userDashTimelineTable);
             this.Controls.Add(this.userDashPetBlob);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.userDashPetPanelBtn);
@@ -106,6 +135,7 @@
             this.Load += new System.EventHandler(this.userDash_Load);
             this.userDashPetPanelBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userDashPetBlob)).EndInit();
+            this.userDashTimelineTable.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -117,5 +147,7 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.PictureBox userDashPetBlob;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TableLayoutPanel userDashTimelineTable;
+        private System.Windows.Forms.Button userDashAddEntryBtn;
     }
 }

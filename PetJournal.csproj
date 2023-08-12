@@ -61,6 +61,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="journalEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="journalEntry.Designer.cs">
+      <DependentUpon>journalEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PetJournalDataBaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PetJournalDataBaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="petRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +98,9 @@
     <Compile Include="userRegistration.Designer.cs">
       <DependentUpon>userRegistration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="journalEntry.resx">
+      <DependentUpon>journalEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="petRegistration.resx">
       <DependentUpon>petRegistration.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +122,17 @@
     <EmbeddedResource Include="userRegistration.resx">
       <DependentUpon>userRegistration.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="PetJournalDataBaseDataSet.xsc">
+      <DependentUpon>PetJournalDataBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PetJournalDataBaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PetJournalDataBaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetJournalDataBaseDataSet.xss">
+      <DependentUpon>PetJournalDataBaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
