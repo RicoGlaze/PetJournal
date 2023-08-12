@@ -35,6 +35,8 @@
             this.userDashPetBlob = new System.Windows.Forms.PictureBox();
             this.userDashTimelineTable = new System.Windows.Forms.TableLayoutPanel();
             this.userDashAddEntryBtn = new System.Windows.Forms.Button();
+            this.breedHead = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ageHead = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.userDashPetPanelBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userDashPetBlob)).BeginInit();
             this.userDashTimelineTable.SuspendLayout();
@@ -78,12 +80,16 @@
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.breedHead,
+            this.ageHead});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(119, 163);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(280, 62);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // userDashPetBlob
             // 
@@ -119,6 +125,16 @@
             this.userDashAddEntryBtn.UseVisualStyleBackColor = true;
             this.userDashAddEntryBtn.Click += new System.EventHandler(this.userDashAddEntryBtn_Click);
             // 
+            // breedHead
+            // 
+            this.breedHead.Text = "Breed";
+            this.breedHead.Width = 150;
+            // 
+            // ageHead
+            // 
+            this.ageHead.Text = "Age";
+            this.ageHead.Width = 150;
+            // 
             // userDash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,5 +165,7 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TableLayoutPanel userDashTimelineTable;
         private System.Windows.Forms.Button userDashAddEntryBtn;
+        private System.Windows.Forms.ColumnHeader breedHead;
+        private System.Windows.Forms.ColumnHeader ageHead;
     }
 }
